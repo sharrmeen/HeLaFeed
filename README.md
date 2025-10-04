@@ -47,7 +47,7 @@ npx hardhat run scripts/deploy.js --network <network>
 4. **Engage:** Like and comment on posts to interact with others.
 
 ## Folder Structure
-
+```
 HeLaFeed/
 ├─ src/
 │  ├─ components/   # React components
@@ -58,6 +58,7 @@ HeLaFeed/
 ├─ scripts/
 │  └─ deploy.js     # Hardhat deployment script
 └─ README.md
+```
 
 ## Smart Contracts
 
