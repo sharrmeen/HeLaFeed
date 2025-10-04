@@ -191,8 +191,8 @@
       ]
     },
     "/Users/sharmeenkhan/HeLaFeed/contracts/SocialFeed.sol": {
-      "lastModificationDate": 1759577964589,
-      "contentHash": "ea367885d21f3f5ee0a8b7f0f911eba9",
+      "lastModificationDate": 1759597704198,
+      "contentHash": "0cce4dcff9849aa0584fd72d23755d3f",
       "sourceName": "contracts/SocialFeed.sol",
       "solcConfig": {
         "version": "0.8.20",

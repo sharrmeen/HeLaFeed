@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Web3Context } from "../contexts/Web3Context";
+import helaLogo from "../assets/HeLaLogoIcon.svg";
 
 function Header() {
     const { account, disconnectWallet, contract } = useContext(Web3Context);
@@ -26,7 +27,10 @@ function Header() {
     return (
         <header className='bg-background-dark shadow-md'>
             <div className='container mx-auto px-4 py-4 flex justify-between items-center'>
-                <h1 className='text-2xl font-semibold text-primary'>HelaFeed</h1>
+            <div className="flex items-center space-x-2">
+                <img src={helaLogo} alt="Hela Logo" className="w-9 h-9" />
+                <h1 className="text-3xl font-semibold text-primary">HelaFeed</h1>
+                </div>
                 {account && (
                     <div className='relative'>
                         <button

@@ -1,26 +1,32 @@
 module.exports = {
-    purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
     darkMode: false,
     theme: {
         extend: {
             colors: {
-                primary: "#BB86FC", // Soft purple
-                secondary: "#03DAC6", // Teal
+                primary: "#12C781",
+                secondary: "#63E9DA",
                 background: {
-                    light: "#2C2C2C", // Dark grey
-                    default: "#1E1E1E", // Darker grey
-                    dark: "#121212", // Almost black
+                    light: "#F5FAFA",
+                    default: "#E8FDFB",
+                    dark: "#0B2E2E",
                 },
                 text: {
-                    light: "#E0E0E0", // Light grey
-                    default: "#BBBBBB", // Medium grey
-                    dark: "#FFFFFF", // White
+                    light: "#4A6A68",
+                    default: "#1E3A39",
+                    dark: "#0A1E1E",
                 },
-                accent: "#CF6679", // Muted pink
+                accent: "#09A9CB",
+                highlight: "#FFD166",
             },
             fontFamily: {
-                sans: ["Inter", "sans-serif"],
+                sans: ["'Exo 2'", "Inter", "sans-serif"],
             },
+
+            backgroundImage: {
+                'hela-gradient-light': "linear-gradient(90deg, #34D89F 0%, #7FF3E0 50%, #3ACFE0 100%)",
+              },
+            
         },
     },
     variants: {
