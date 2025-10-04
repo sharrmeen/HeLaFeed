@@ -1,10 +1,9 @@
-// src/contexts/Web3Context.js
 import React, { createContext, useState, useEffect } from "react";
 import { ethers } from "ethers";
 import SocialFeedABI from "../ABI/SocialFeed.json";
 export const Web3Context = createContext();
 
-// Initialize contract 
+
 const CONTRACT_ADDRESS = "0x8B41cdB3cA3D7A223D36592Eefb39e4d4B3bd4e4";
 const contractABI = SocialFeedABI.abi;
 export const Web3Provider = ({ children }) => {

@@ -15,8 +15,8 @@ function ConnectWallet() {
                 <h1 className="text-3xl font-semibold text-primary">HelaFeed</h1>
                 </div>
                     <button
-                        onClick={connectWallet}
-                        className="bg-primary text-background-dark font-medium py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-150 ease-in-out"
+                        onClick={() => { console.log("clicked"); connectWallet(); }}
+                        className="relative z-50 bg-primary text-background-dark font-medium py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-150 ease-in-out"
                     >
                         Connect MetaMask
                     </button>
