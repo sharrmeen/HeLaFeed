@@ -2,19 +2,16 @@
 import hre from "hardhat";
 
 async function main() {
-  // 1 million tokens, converted to wei
-  const initialSupply = hre.ethers.parseEther("1000000");
+  // Get the contract factory for SocialFeed
+  const SocialFeed = await hre.ethers.getContractFactory("SocialFeed");
 
-  // Get contract factory
-  const Token = await hre.ethers.getContractFactory("MyToken");
-
-  // Deploy contract
-  const token = await Token.deploy(initialSupply);
+  // Deploy the contract
+  const socialFeed = await SocialFeed.deploy();
 
   // Wait for deployment to be mined
-  await token.waitForDeployment();
+  await socialFeed.waitForDeployment();
 
-  console.log("Token deployed to:", await token.getAddress());
+  console.log("SocialFeed deployed to:", await socialFeed.getAddress());
 }
 
 // Run the main function and catch errors
