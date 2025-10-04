@@ -18,6 +18,7 @@ contract SocialFeed {
         uint likes;
         uint[] commentIds;
         mapping(address => bool) likedBy;
+        uint timestamp;
     }
 
     // Comment structure
@@ -26,6 +27,7 @@ contract SocialFeed {
         string authorUsername;
         uint postId;
         string content;
+        uint timestamp;
     }
 
     // Storage
@@ -55,6 +57,7 @@ contract SocialFeed {
         p.postId = postCount;
         p.author = msg.sender;
         p.content = _content;
+        p.timestamp = block.timestamp;
     }
 
     // Like a post
@@ -92,6 +95,7 @@ contract SocialFeed {
         c.authorUsername = users[msg.sender].username;
         c.postId = _postId;
         c.content = _content;
+        c.timestamp = block.timestamp;
         posts[_postId].commentIds.push(commentCount);
     }
 
