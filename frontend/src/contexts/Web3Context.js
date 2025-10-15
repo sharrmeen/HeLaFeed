@@ -4,7 +4,7 @@ import SocialFeedABI from "../ABI/SocialFeed.json";
 export const Web3Context = createContext();
 
 
-const CONTRACT_ADDRESS = "0x8B41cdB3cA3D7A223D36592Eefb39e4d4B3bd4e4";
+const CONTRACT_ADDRESS = "0x0601d45C9cF2e6f5F18E57869C8ecde769da2C2e";
 const contractABI = SocialFeedABI.abi;
 export const Web3Provider = ({ children }) => {
     const [account, setAccount] = useState(null);

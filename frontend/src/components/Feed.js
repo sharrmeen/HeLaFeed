@@ -15,7 +15,8 @@ function Feed() {
         for (let i = postCount; i > Math.max(0, postCount - 10); i--) {
           const post = await contract.posts(i);
           const authorUsername = await contract.getPostAuthorUsername(i);
-          fetchedPosts.push({ ...post, postId: i, authorUsername });
+          const likes = Number(await contract.getPostLikes(i)); 
+          fetchedPosts.push({ ...post, postId: i, authorUsername,likes });
         }
         setPosts(fetchedPosts);
       } catch (error) {

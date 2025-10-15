@@ -113,4 +113,10 @@ contract SocialFeed {
     function getPostAuthorUsername(uint _postId) public view returns (string memory) {
         return users[posts[_postId].author].username;
     }
+
+    // Get total likes for a post
+    function getPostLikes(uint _postId) public view returns (uint) {
+        return posts[_postId].likes;
+    }
+
 }
