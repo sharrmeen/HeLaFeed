@@ -1,39 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Hela Blockchain Theme */
+@layer base {
+  :root {
+    /* Colors */
+    --background: 192 72% 95%;      /* #E6FDF8 light bg */
+    --foreground: 210 10% 15%;      /* #363636 dark text */
 
-body {
-  @apply bg-background-default text-text-light;
-}
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 15%;
 
-.sleek-card {
-  @apply bg-gray-900 rounded-lg shadow-sm p-6 mb-6 border border-background-dark;
-}
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 15%;
 
-.sleek-input {
-  @apply bg-background-light border border-background-dark rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-accent;
-}
+    --primary: 164 80% 50%;         /* #12c781 */
+    --primary-foreground: 0 0% 100%;
 
-.sleek-button {
-  @apply bg-primary text-white font-medium py-2 px-4 rounded-md hover:bg-opacity-90 transition duration-150 ease-in-out;
-}
+    --secondary: 176 70% 63%;       /* #63e9da */
+    --secondary-foreground: 0 0% 100%;
 
-.loader {
-  border: 3px solid #e2e8f0;
-  border-top: 3px solid #63b3ed;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  animation: spin 1s linear infinite;
-}
+    --accent: 190 87% 36%;          /* #09a9cb */
+    --accent-foreground: 0 0% 100%;
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+    --muted: 210 10% 85%;           /* light muted bg */
+    --muted-foreground: 210 10% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 164 80% 50%;
+
+    --radius: 1rem;
+
+    /* Web3 Theme Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(164 80% 50%), hsl(176 70% 63%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(192 72% 95%));
+    --gradient-hero: linear-gradient(180deg, hsl(192 72% 95%), hsl(164 80% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(164 80% 50% / 0.1);
+    --shadow-card: 0 8px 30px -4px hsl(164 80% 50% / 0.15);
+    --shadow-glow: 0 0 40px hsl(164 80% 50% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  100% {
-    transform: rotate(360deg);
+
+  .dark {
+    --background: 210 10% 10%;       /* dark bg */
+    --foreground: 0 0% 98%;
+
+    --card: 210 12% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 12% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 164 80% 50%;          /* #12c781 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 176 70% 63%;        /* #63e9da */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 190 87% 36%;           /* #09a9cb */
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 12% 20%;
+    --muted-foreground: 210 10% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 18%;
+    --input: 210 15% 18%;
+    --ring: 164 80% 50%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(164 80% 50%), hsl(176 70% 63%));
+    --gradient-card: linear-gradient(145deg, hsl(210 12% 15%), hsl(210 12% 17%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 10% 10%), hsl(210 12% 15%));
+    
+    --shadow-soft: 0 4px 20px -2px hsl(164 80% 50% / 0.3);
+    --shadow-card: 0 8px 30px -4px hsl(164 80% 50% / 0.4);
+    --shadow-glow: 0 0 40px hsl(164 80% 50% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
